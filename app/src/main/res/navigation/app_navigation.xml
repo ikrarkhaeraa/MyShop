@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_navigation"
+    app:startDestination="@id/main_navigation">
+
+    <include app:graph="@navigation/main_navigation" />
+
+    <action
+        android:id="@+id/store_to_detailCompose"
+        app:destination="@id/detailProductCompose" />
+
+    <fragment
+        android:id="@+id/detailProductCompose"
+        android:name="com.example.myshop.detail.DetailFragment"
+        android:label="fragment_detail_compose">
+        <argument
+            android:name="productId"
+            app:argType="integer"
+            android:defaultValue="0" />
+    </fragment>
+
+</navigation>
